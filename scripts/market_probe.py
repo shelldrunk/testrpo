@@ -8,6 +8,7 @@ import argparse
 import datetime as dt
 import json
 import math
+import os
 import pathlib
 import ssl
 import urllib.error
@@ -164,6 +165,7 @@ def probe_one(provider,asset,now_s,request_fn=fetch):
     row={"provider":provider,"asset":asset,"pair":symbol,"instrument":"AGGREGATED_SPOT_REFERENCE" if provider=="CoinGecko" else "SPOT","endpoints":{},
          "fetched_at":None,"quote_as_of":None,"price":None,"quote_fresh":False,
          "one_h_closed":False,"four_h_closed":False,"one_h_latest":None,"four_h_latest":None,
+         "one_h_bars":[],"four_h_bars":[],
          "status":"FAILED"}
     responses={}
     for key,url in targets.items():
@@ -195,10 +197,12 @@ def probe_one(provider,asset,now_s,request_fn=fetch):
         c1=kraken_ohlc_parser(responses['one_h'],3600,now_s)
         c4=kraken_ohlc_parser(responses['four_h'],14400,now_s)
     if c1:
+        row['one_h_bars'] = [{k:v for k,v in bar.items() if k!='close_timestamp'} for bar in c1[-24:]]
         row['one_h_latest']={k:v for k,v in c1[-1].items() if k!='close_timestamp'}
         row['one_h_closed']=0<=now_s-c1[-1]['close_timestamp'] <= ONE_H_MAX_AGE_S
         row['one_h_recent_range']={"high":max(x['high'] for x in c1[-5:]),"low":min(x['low'] for x in c1[-5:])} if len(c1)>=5 else None
     if c4:
+        row['four_h_bars'] = [{k:v for k,v in bar.items() if k!='close_timestamp'} for bar in c4[-12:]]
         row['four_h_latest']={k:v for k,v in c4[-1].items() if k!='close_timestamp'}
         row['four_h_closed']=0<=now_s-c4[-1]['close_timestamp'] <= FOUR_H_MAX_AGE_S
     row['status']='VERIFIED' if row['quote_fresh'] and row['one_h_closed'] and row['four_h_closed'] else 'PARTIAL' if row.get('price') or row.get('reference_price') or c1 or c4 else 'FAILED'
@@ -226,7 +230,14 @@ def main():
     all_full=all(best[a] and best[a]['status']=='VERIFIED' for a in ASSETS)
     t=utcnow().timestamp()
     report={"schema":"CRYPTO_PUBLIC_SPOT_MARKET_PROBE_V1", "generated_at":iso(t),"quotes_max_age_seconds":QUOTE_MAX_AGE_S,
-      "asset_coverage":{a: {"provider":best[a]['provider'],"price":best[a]['price'],"quote_as_of":best[a]['quote_as_of'],"one_h_closed":best[a]['one_h_closed'],"four_h_closed":best[a]['four_h_closed']} if best[a] else None for a in ASSETS},
+      "github_run_id":os.environ.get("GITHUB_RUN_ID"),"github_commit":os.environ.get("GITHUB_SHA"),
+      "asset_coverage":{a: {"provider":best[a]['provider'],"pair":best[a]['pair'],"instrument":best[a]['instrument'],
+                  "timestamp_basis":best[a].get('timestamp_basis'),
+                  "price":best[a]['price'],"quote_as_of":best[a]['quote_as_of'],
+                  "one_h_closed":best[a]['one_h_closed'],"four_h_closed":best[a]['four_h_closed'],
+                  "one_h_latest":best[a].get('one_h_latest'),"four_h_latest":best[a].get('four_h_latest'),
+                  "one_h_bars":best[a].get('one_h_bars',[]),"four_h_bars":best[a].get('four_h_bars',[]),
+                  "one_h_recent_range":best[a].get('one_h_recent_range')} if best[a] else None for a in ASSETS},
       "test_a_valid_spot_all_four":"PASS" if all_fresh else "BLOCKED",
       "test_c_complete_candles_all_four":"PASS" if all_full else "BLOCKED",
       "watch_conclusion":"RESEARCH_EVIDENCE_AVAILABLE" if all_full else "PARTIAL_MARKET_COVERAGE" if any(best.values()) else "DATA_PIPELINE_DEFECT",
