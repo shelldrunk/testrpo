@@ -1,17 +1,17 @@
 {
   "schema": "CRYPTO_PUBLIC_SPOT_MARKET_PROBE_V1",
-  "generated_at": "2026-11-13T00:49:59.762696Z",
+  "generated_at": "2026-11-13T00:51:36.640775Z",
   "quotes_max_age_seconds": 180,
-  "github_run_id": "43340171722",
-  "github_commit": "98d61d4c2de88ec648ee1e5cf81a18d9cd62fa14",
+  "github_run_id": "43340389103",
+  "github_commit": "865dbbd13594a625b10d5be8b99eff8b08144824",
   "asset_coverage": {
     "BTC": {
       "provider": "Coinbase Exchange",
       "pair": "BTC-USD",
       "instrument": "SPOT",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "price": 71000.29,
-      "quote_as_of": "2026-11-13T00:49:58.127037Z",
+      "price": 70942.43,
+      "quote_as_of": "2026-11-13T00:51:36.016220Z",
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -370,8 +370,8 @@
       "pair": "ETH-USD",
       "instrument": "SPOT",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "price": 2008.81,
-      "quote_as_of": "2026-11-13T00:49:57.644956Z",
+      "price": 2007.5,
+      "quote_as_of": "2026-11-13T00:51:34.537334Z",
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -730,8 +730,8 @@
       "pair": "SOL-USD",
       "instrument": "SPOT",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "price": 81.41,
-      "quote_as_of": "2026-11-13T00:49:58.424518Z",
+      "price": 81.31,
+      "quote_as_of": "2026-11-13T00:51:36.239722Z",
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -1090,8 +1090,8 @@
       "pair": "BNB-USD",
       "instrument": "SPOT",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "price": 655.56,
-      "quote_as_of": "2026-11-13T00:49:44.278886Z",
+      "price": 654.32,
+      "quote_as_of": "2026-11-13T00:51:35.187030Z",
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -1474,9 +1474,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:49:59.491685Z",
-      "quote_as_of": "2026-11-13T00:49:58.127037Z",
-      "price": 71000.29,
+      "fetched_at": "2026-11-13T00:51:36.313186Z",
+      "quote_as_of": "2026-11-13T00:51:36.016220Z",
+      "price": 70942.43,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -1828,7 +1828,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "quote_age_seconds": 1.36,
+      "quote_age_seconds": 0.3,
       "one_h_recent_range": {
         "high": 71704.4,
         "low": 71008.0
@@ -1855,9 +1855,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:49:59.580689Z",
-      "quote_as_of": "2026-11-13T00:49:57.644956Z",
-      "price": 2008.81,
+      "fetched_at": "2026-11-13T00:51:36.426006Z",
+      "quote_as_of": "2026-11-13T00:51:34.537334Z",
+      "price": 2007.5,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -2209,7 +2209,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "quote_age_seconds": 1.94,
+      "quote_age_seconds": 1.89,
       "one_h_recent_range": {
         "high": 2020.65,
         "low": 2004.79
@@ -2236,9 +2236,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:49:59.671080Z",
-      "quote_as_of": "2026-11-13T00:49:58.424518Z",
-      "price": 81.41,
+      "fetched_at": "2026-11-13T00:51:36.537146Z",
+      "quote_as_of": "2026-11-13T00:51:36.239722Z",
+      "price": 81.31,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -2590,7 +2590,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "quote_age_seconds": 1.25,
+      "quote_age_seconds": 0.3,
       "one_h_recent_range": {
         "high": 81.91,
         "low": 81.02
@@ -2617,9 +2617,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:49:59.758363Z",
-      "quote_as_of": "2026-11-13T00:49:44.278886Z",
-      "price": 655.56,
+      "fetched_at": "2026-11-13T00:51:36.637007Z",
+      "quote_as_of": "2026-11-13T00:51:35.187030Z",
+      "price": 654.32,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -2971,7 +2971,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "quote_age_seconds": 15.48,
+      "quote_age_seconds": 1.45,
       "one_h_recent_range": {
         "high": 657.15,
         "low": 651.77
