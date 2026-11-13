@@ -1,8 +1,14 @@
-name: Crypto public spot market probe (manual, read-only)
+name: Crypto public spot market bridge (public data, no trading)
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'bridge/refresh_request.txt'
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: crypto-public-market-bridge
+  cancel-in-progress: false
 jobs:
   market-evidence:
     runs-on: ubuntu-latest
@@ -12,14 +18,30 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Offline parser and guard regression
+      - name: Offline parser and safety tests
         run: python -m unittest discover -s tests -v
-      - name: Fetch public spot trade times and closed OHLC from exchanges
+      - name: Fetch public spot quotes and completed 1H/4H OHLC
         run: python scripts/market_probe.py --output market_probe.json
-      - name: Render concise Traditional Chinese Watch research (never a trade)
+      - name: Render Traditional Chinese research summary
         if: always()
         run: python scripts/render_watch_summary.py market_probe.json > watch_research_summary.txt
-      - name: Upload raw evidence even when acceptance is blocked
+      - name: Publish public market snapshot for Watch readback
+        if: always()
+        run: |
+          if [ ! -s market_probe.json ]; then
+            echo "Market probe did not produce evidence; no publication"
+            exit 1
+          fi
+          mkdir -p bridge
+          cp market_probe.json bridge/latest_market.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add bridge/latest_market.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish timestamped public crypto market snapshot [skip ci]'
+            git push origin HEAD:main
+          fi
+      - name: Archive raw market evidence, including failed providers
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -29,5 +51,7 @@ jobs:
             watch_research_summary.txt
           if-no-files-found: warn
           retention-days: 3
-      - name: Gate actual market evidence (no fake PASS)
-        run: python scripts/verify_probe.py market_probe.json
+      - name: Gate actual market evidence
+        run: |
+          python scripts/verify_probe.py market_probe.json
+          python scripts/validate_watch_snapshot.py market_probe.json
