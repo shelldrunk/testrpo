@@ -1,17 +1,17 @@
 {
   "schema": "CRYPTO_PUBLIC_SPOT_MARKET_PROBE_V1",
-  "generated_at": "2026-11-13T00:44:17.832930Z",
+  "generated_at": "2026-11-13T00:47:16.826293Z",
   "quotes_max_age_seconds": 180,
-  "github_run_id": "43339395951",
-  "github_commit": "104fef3a3ba588d513e0edfecf3386f0c82916f2",
+  "github_run_id": "43339767969",
+  "github_commit": "cc90c32d536cd5f188b4a10039b6f1b99a958951",
   "asset_coverage": {
     "BTC": {
       "provider": "Coinbase Exchange",
       "pair": "BTC-USD",
       "instrument": "SPOT",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "price": 70830.13,
-      "quote_as_of": "2026-11-13T00:44:05.914414Z",
+      "price": 70982.27,
+      "quote_as_of": "2026-11-13T00:47:07.242231Z",
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -370,8 +370,8 @@
       "pair": "ETH-USD",
       "instrument": "SPOT",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "price": 2001.59,
-      "quote_as_of": "2026-11-13T00:44:06.254582Z",
+      "price": 2006.34,
+      "quote_as_of": "2026-11-13T00:47:06.055792Z",
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -730,8 +730,8 @@
       "pair": "SOL-USD",
       "instrument": "SPOT",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "price": 81.07,
-      "quote_as_of": "2026-11-13T00:44:03.194378Z",
+      "price": 81.27,
+      "quote_as_of": "2026-11-13T00:47:03.532634Z",
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -1090,8 +1090,8 @@
       "pair": "BNB-USD",
       "instrument": "SPOT",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "price": 652.92,
-      "quote_as_of": "2026-11-13T00:44:03.241772Z",
+      "price": 654.4,
+      "quote_as_of": "2026-11-13T00:46:52.181964Z",
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -1474,9 +1474,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:07.089252Z",
-      "quote_as_of": "2026-11-13T00:44:05.914414Z",
-      "price": 70830.13,
+      "fetched_at": "2026-11-13T00:47:08.983582Z",
+      "quote_as_of": "2026-11-13T00:47:07.242231Z",
+      "price": 70982.27,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -1828,7 +1828,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "quote_age_seconds": 1.17,
+      "quote_age_seconds": 1.74,
       "one_h_recent_range": {
         "high": 71704.4,
         "low": 71008.0
@@ -1855,9 +1855,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:07.236938Z",
-      "quote_as_of": "2026-11-13T00:44:06.254582Z",
-      "price": 2001.59,
+      "fetched_at": "2026-11-13T00:47:09.068959Z",
+      "quote_as_of": "2026-11-13T00:47:06.055792Z",
+      "price": 2006.34,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -2209,7 +2209,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "quote_age_seconds": 0.98,
+      "quote_age_seconds": 3.01,
       "one_h_recent_range": {
         "high": 2020.65,
         "low": 2004.79
@@ -2236,9 +2236,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:07.363640Z",
-      "quote_as_of": "2026-11-13T00:44:03.194378Z",
-      "price": 81.07,
+      "fetched_at": "2026-11-13T00:47:09.153212Z",
+      "quote_as_of": "2026-11-13T00:47:03.532634Z",
+      "price": 81.27,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -2590,7 +2590,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "quote_age_seconds": 4.17,
+      "quote_age_seconds": 5.62,
       "one_h_recent_range": {
         "high": 81.91,
         "low": 81.02
@@ -2617,9 +2617,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:07.522797Z",
-      "quote_as_of": "2026-11-13T00:44:03.241772Z",
-      "price": 652.92,
+      "fetched_at": "2026-11-13T00:47:09.252047Z",
+      "quote_as_of": "2026-11-13T00:46:52.181964Z",
+      "price": 654.4,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -2971,7 +2971,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "EXCHANGE_TICKER_TRADE_TIME",
-      "quote_age_seconds": 4.28,
+      "quote_age_seconds": 17.07,
       "one_h_recent_range": {
         "high": 657.15,
         "low": 651.77
@@ -3005,9 +3005,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:09.110321Z",
-      "quote_as_of": "2026-11-13T00:43:55.697000Z",
-      "price": 70816.62,
+      "fetched_at": "2026-11-13T00:47:10.265884Z",
+      "quote_as_of": "2026-11-13T00:46:51.930000Z",
+      "price": 71005.84,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -3251,7 +3251,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "ORIGINAL_SPOT_TRADE_TIME",
-      "quote_age_seconds": 13.41,
+      "quote_age_seconds": 18.34,
       "one_h_recent_range": {
         "high": 71717.54,
         "low": 71055.24
@@ -3285,9 +3285,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:10.696866Z",
-      "quote_as_of": "2026-11-13T00:44:06.931000Z",
-      "price": 2002.06,
+      "fetched_at": "2026-11-13T00:47:11.528617Z",
+      "quote_as_of": "2026-11-13T00:47:08.520000Z",
+      "price": 2007.0,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -3531,7 +3531,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "ORIGINAL_SPOT_TRADE_TIME",
-      "quote_age_seconds": 3.77,
+      "quote_age_seconds": 3.01,
       "one_h_recent_range": {
         "high": 2021.24,
         "low": 2005.56
@@ -3565,10 +3565,10 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:12.203394Z",
+      "fetched_at": "2026-11-13T00:47:13.011318Z",
       "quote_as_of": "2026-11-13T00:43:21.784000Z",
       "price": 81.1,
-      "quote_fresh": true,
+      "quote_fresh": false,
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -3809,9 +3809,9 @@
           "volume": 1075.851
         }
       ],
-      "status": "VERIFIED",
+      "status": "PARTIAL",
       "timestamp_basis": "ORIGINAL_SPOT_TRADE_TIME",
-      "quote_age_seconds": 50.42,
+      "quote_age_seconds": 231.23,
       "one_h_recent_range": {
         "high": 81.89,
         "low": 81.08
@@ -3845,10 +3845,10 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:13.674923Z",
+      "fetched_at": "2026-11-13T00:47:14.453956Z",
       "quote_as_of": "2026-11-13T00:41:46.200000Z",
       "price": 653.02,
-      "quote_fresh": true,
+      "quote_fresh": false,
       "one_h_closed": true,
       "four_h_closed": true,
       "one_h_latest": {
@@ -4089,9 +4089,9 @@
           "volume": 5.773
         }
       ],
-      "status": "VERIFIED",
+      "status": "PARTIAL",
       "timestamp_basis": "ORIGINAL_SPOT_TRADE_TIME",
-      "quote_age_seconds": 147.47,
+      "quote_age_seconds": 328.25,
       "one_h_recent_range": {
         "high": 657.05,
         "low": 652.94
@@ -4125,9 +4125,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:14.372321Z",
-      "quote_as_of": "2026-11-13T00:44:13.373671Z",
-      "price": 70818.8,
+      "fetched_at": "2026-11-13T00:47:14.838736Z",
+      "quote_as_of": "2026-11-13T00:47:12.448117Z",
+      "price": 70995.9,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -4479,7 +4479,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "ORIGINAL_SPOT_TRADE_TIME",
-      "quote_age_seconds": 1.0,
+      "quote_age_seconds": 2.39,
       "one_h_recent_range": {
         "high": 71700.7,
         "low": 71022.7
@@ -4513,9 +4513,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:14.998674Z",
-      "quote_as_of": "2026-11-13T00:44:11.316023Z",
-      "price": 2000.85,
+      "fetched_at": "2026-11-13T00:47:15.114555Z",
+      "quote_as_of": "2026-11-13T00:47:11.568549Z",
+      "price": 2006.88,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -4867,7 +4867,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "ORIGINAL_SPOT_TRADE_TIME",
-      "quote_age_seconds": 3.68,
+      "quote_age_seconds": 3.55,
       "one_h_recent_range": {
         "high": 2020.68,
         "low": 2004.74
@@ -4901,9 +4901,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:15.707005Z",
-      "quote_as_of": "2026-11-13T00:44:11.291106Z",
-      "price": 81.03,
+      "fetched_at": "2026-11-13T00:47:15.398533Z",
+      "quote_as_of": "2026-11-13T00:47:12.206619Z",
+      "price": 81.26,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -5255,7 +5255,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "ORIGINAL_SPOT_TRADE_TIME",
-      "quote_age_seconds": 4.42,
+      "quote_age_seconds": 3.19,
       "one_h_recent_range": {
         "high": 81.87,
         "low": 81.03
@@ -5289,9 +5289,9 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:16.313396Z",
-      "quote_as_of": "2026-11-13T00:43:34.849743Z",
-      "price": 652.91,
+      "fetched_at": "2026-11-13T00:47:15.764219Z",
+      "quote_as_of": "2026-11-13T00:47:09.736768Z",
+      "price": 654.29,
       "quote_fresh": true,
       "one_h_closed": true,
       "four_h_closed": true,
@@ -5643,7 +5643,7 @@
       ],
       "status": "VERIFIED",
       "timestamp_basis": "ORIGINAL_SPOT_TRADE_TIME",
-      "quote_age_seconds": 41.46,
+      "quote_age_seconds": 6.03,
       "one_h_recent_range": {
         "high": 657.18,
         "low": 651.98
@@ -5677,7 +5677,7 @@
           "fetch_status": "FAILED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:16.671970Z",
+      "fetched_at": "2026-11-13T00:47:16.077087Z",
       "quote_as_of": null,
       "price": null,
       "quote_fresh": false,
@@ -5717,7 +5717,7 @@
           "fetch_status": "FAILED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:17.042795Z",
+      "fetched_at": "2026-11-13T00:47:16.282896Z",
       "quote_as_of": null,
       "price": null,
       "quote_fresh": false,
@@ -5757,7 +5757,7 @@
           "fetch_status": "FAILED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:17.244478Z",
+      "fetched_at": "2026-11-13T00:47:16.460362Z",
       "quote_as_of": null,
       "price": null,
       "quote_fresh": false,
@@ -5797,7 +5797,7 @@
           "fetch_status": "FAILED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:17.418122Z",
+      "fetched_at": "2026-11-13T00:47:16.587339Z",
       "quote_as_of": null,
       "price": null,
       "quote_fresh": false,
@@ -5823,7 +5823,7 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:17.525711Z",
+      "fetched_at": "2026-11-13T00:47:16.632476Z",
       "quote_as_of": null,
       "price": null,
       "quote_fresh": false,
@@ -5834,8 +5834,8 @@
       "one_h_bars": [],
       "four_h_bars": [],
       "status": "PARTIAL",
-      "reference_price": 70862.0,
-      "provider_updated_at": "2026-11-13T00:42:53Z",
+      "reference_price": 70846.0,
+      "provider_updated_at": "2026-11-13T00:44:57Z",
       "timestamp_basis": "AGGREGATOR_UPDATE_NOT_TRADE_TIME"
     },
     {
@@ -5852,7 +5852,7 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:17.633450Z",
+      "fetched_at": "2026-11-13T00:47:16.674497Z",
       "quote_as_of": null,
       "price": null,
       "quote_fresh": false,
@@ -5863,8 +5863,8 @@
       "one_h_bars": [],
       "four_h_bars": [],
       "status": "PARTIAL",
-      "reference_price": 2002.92,
-      "provider_updated_at": "2026-11-13T00:42:53Z",
+      "reference_price": 2002.91,
+      "provider_updated_at": "2026-11-13T00:45:56Z",
       "timestamp_basis": "AGGREGATOR_UPDATE_NOT_TRADE_TIME"
     },
     {
@@ -5881,7 +5881,7 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:17.734124Z",
+      "fetched_at": "2026-11-13T00:47:16.750100Z",
       "quote_as_of": null,
       "price": null,
       "quote_fresh": false,
@@ -5892,8 +5892,8 @@
       "one_h_bars": [],
       "four_h_bars": [],
       "status": "PARTIAL",
-      "reference_price": 81.09,
-      "provider_updated_at": "2026-11-13T00:42:53Z",
+      "reference_price": 81.1,
+      "provider_updated_at": "2026-11-13T00:45:56Z",
       "timestamp_basis": "AGGREGATOR_UPDATE_NOT_TRADE_TIME"
     },
     {
@@ -5910,7 +5910,7 @@
           "fetch_status": "VERIFIED"
         }
       },
-      "fetched_at": "2026-11-13T00:44:17.832869Z",
+      "fetched_at": "2026-11-13T00:47:16.826239Z",
       "quote_as_of": null,
       "price": null,
       "quote_fresh": false,
@@ -5921,8 +5921,8 @@
       "one_h_bars": [],
       "four_h_bars": [],
       "status": "PARTIAL",
-      "reference_price": 653.25,
-      "provider_updated_at": "2026-11-13T00:42:53Z",
+      "reference_price": 652.99,
+      "provider_updated_at": "2026-11-13T00:44:57Z",
       "timestamp_basis": "AGGREGATOR_UPDATE_NOT_TRADE_TIME"
     }
   ]
