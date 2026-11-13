@@ -32,6 +32,7 @@ jobs:
             echo "Market probe did not produce evidence; no publication"
             exit 1
           fi
+          python scripts/compact_watch_feed.py market_probe.json watch_market_compact.json
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           published=0
@@ -42,7 +43,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             mkdir -p bridge
-            cp market_probe.json bridge/latest_market.json
+            cp watch_market_compact.json bridge/latest_market.json
             git add bridge/latest_market.json
             if git diff --cached --quiet; then
               echo 'Snapshot already present'; published=1; break
