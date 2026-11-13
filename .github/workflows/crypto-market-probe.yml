@@ -1,0 +1,33 @@
+name: Crypto public spot market probe (manual, read-only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  market-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline parser and guard regression
+        run: python -m unittest discover -s tests -v
+      - name: Fetch public spot trade times and closed OHLC from exchanges
+        run: python scripts/market_probe.py --output market_probe.json
+      - name: Render concise Traditional Chinese Watch research (never a trade)
+        if: always()
+        run: python scripts/render_watch_summary.py market_probe.json > watch_research_summary.txt
+      - name: Upload raw evidence even when acceptance is blocked
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crypto-public-market-evidence
+          path: |
+            market_probe.json
+            watch_research_summary.txt
+          if-no-files-found: warn
+          retention-days: 3
+      - name: Gate actual market evidence (no fake PASS)
+        run: python scripts/verify_probe.py market_probe.json
