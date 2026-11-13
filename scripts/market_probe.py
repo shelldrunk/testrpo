@@ -213,14 +213,20 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--output',default='market_probe.json')
     p.add_argument('--providers',default=','.join(PROVIDERS))
+    p.add_argument('--fast-fallback', action='store_true', help='Skip further providers for assets already verified by a spot exchange')
     args=p.parse_args()
     t=utcnow().timestamp()
     providers=[x.strip() for x in args.providers.split(',') if x.strip()]
     rows=[]
+    verified_assets=set()
     for provider in providers:
         if provider not in PROVIDERS: raise SystemExit('Unknown provider: '+provider)
         for asset in ASSETS:
-            rows.append(probe_one(provider,asset,None))
+            if args.fast_fallback and asset in verified_assets: continue
+            row=probe_one(provider,asset,None)
+            rows.append(row)
+            if row['status']=='VERIFIED': verified_assets.add(asset)
+        if args.fast_fallback and verified_assets==set(ASSETS):break
     best={}
     for a in ASSETS:
         candidates=[r for r in rows if r['asset']==a]
