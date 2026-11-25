@@ -1,6 +1,9 @@
 name: Crypto public spot market bridge (public data, no trading)
 on:
   workflow_dispatch:
+  schedule:
+    # Public market-only refresh. GitHub scheduled runs may be delayed; Watch checks freshness independently.
+    - cron: '*/5 * * * *'
   push:
     paths:
       - 'bridge/refresh_request.txt'
